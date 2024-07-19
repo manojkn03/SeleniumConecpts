@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/manojk01/IdeaProjects/SeleniumExamples">
+    <classes>
+        <class name="testing.com.LaunchingBrowser">
+            <methods><include name="launchBrowser"/>
+            </methods></class><class name="testing.com.NaviagteCommand"><methods>
+        <include name="test"/></methods></class><class name="testing.com.OptionClass"><methods><include name="launchBrowser"/></methods></class><class name="testing.com.Selenium01"><methods><include name="test"/></methods></class><class name="testing.com.HtmlLocators"><methods><include name="test"/></methods></class></classes></test></suite>
