@@ -9,14 +9,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-public class WaitMethods {
+public class ThreadSleepDemo {
     @Test
     public void test1() throws InterruptedException {
          // Sunchronization: When selenium execution is faster and application response is low we will get this problem
 
         // we can handle this by using wait statements
+        // 1. thread.sleep()
+        // 2. ImplicitWait()
+        // 3. ExplicitWait()
 
         // 1. Thread.sleep()- provided by java, not ideal way
         // Provided by java not in selenium, it will halt the java execution by specified time
@@ -50,23 +51,6 @@ public class WaitMethods {
         // Dis advantage is if the specified time is not sufficiant we wil get exception
         // Slightly better than Thread.sleep()
 
-        WebDriver driver1 = new ChromeDriver(options);
-
-        driver1.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-
-        driver.get("https://app.vwo.com");
-        WebElement username1=driver1.findElement(By.id("login-username"));
-        username1.sendKeys("admin@admin.com");
-        WebElement password1=driver1.findElement(By.id("login-password"));
-        password1.sendKeys("admin");
-        WebElement loginButton1=driver1.findElement(By.xpath("//button[@data-qa='sibequkica']"));
-        loginButton1.click();
-
-        WebElement error1 = driver1.findElement(By.cssSelector("div#js-notification-box-msg"));
-        String error_text1= error1.getText();
-
-        Assert.assertEquals(error_text1,"Your email, password, IP address or location did not match" );
-        driver1.close();
 
 
         //3. Explicit wait provided by Webdriver

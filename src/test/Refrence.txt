@@ -1,0 +1,18 @@
+There are three types of switching commands
+
+1. Browser windows
+
+driver.switchTo().window(window id);
+
+2. Alert
+
+driver.switchTo().alert();
+driver.switchTo().alert().accept();
+driver.switchTo().alert().dismiss();
+
+3. Frames
+
+driver.switchTo().frame(id or name);
+driver.switchTo().frame(WebElement);
+driver.switchTo().frame(index);
+

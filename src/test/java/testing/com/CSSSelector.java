@@ -39,6 +39,5 @@ public class CSSSelector {
         //example    span.Login-Button[data-qa='hocewoqisi']
 
 
-
     }
 }
